@@ -12,7 +12,7 @@
  `setBotSubtitle("By The Boogiemaster")`
  */
 startBot()
-setBotTitle("My Awesome Dance")
+setBotTitle("Minha dança incrível")
 setBotSubtitle("By The Boogiemaster")
 
 func doTheDisco() {
