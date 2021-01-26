@@ -35,6 +35,7 @@ if gearWeight < totalCarryingCapacity {
 } else {
     "Everyone quits! Looks like you've got a solo show."
 }
+
 /*:
  But that code is less than elegant. One result is duplicated due to the complex logic expressed by multiple `if` and `else` statements. In addition, the nested code isn't very clear to read—any manager that came after you would have a hard time tweaking your algorithm. And of course, adding new factors would produce even more tangled code.
  

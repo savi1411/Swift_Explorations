@@ -10,7 +10,7 @@
  
  Parts 1 and 3 are values, like the numbers and strings you’ve already been working with. Part 2 is something new: a _comparison operator_. Here’s an example:
  */
-1 == 2
+1 == 1
 /*:
  The double equal sign `==`, or _equality operator_, checks if the left-hand and right-hand sides of the statement are equal. In this case, they’re not equal, so the statement is false.
 
@@ -31,6 +31,9 @@ let nineTimesTen = 9 * 10
 hundred == tenTimesTen
 hundred == nineTimesTen
 //:  - Experiment: Try some comparisons of your own. Can you check if two string values are equal?
+var string1 = "abc"
+var string2 = "abc"
+string1 == string2
 
 /*:
 Find out more ways to compare values on the next page.

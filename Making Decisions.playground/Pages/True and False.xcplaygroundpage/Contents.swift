@@ -10,7 +10,7 @@
 true
 false
 //: They can be assigned to constants, just like numbers or strings:
-let yes = true
+let yes: Bool = true
 yes
 let no = false
 no

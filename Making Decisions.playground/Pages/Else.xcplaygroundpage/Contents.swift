@@ -3,7 +3,7 @@
  
  The code to display a video message contains two very similar statements. This approach can be slow, confusing, and, an easy way to make mistakes — as you saw in the experiment on the previous page.
  */
-let videoLength = 5
+let videoLength = 4
 
 if videoLength >= 5 {
     "That's lovely."
@@ -14,8 +14,10 @@ if videoLength < 5 {
 }
 //: What you really want is to be able to say “If the value is less than 5, do this; otherwise, do something else”. You can do that with the `else` keyword:
 if videoLength < 5 {
+    // True
     "If I blinked, I'd miss it."
 } else {
+    // False
     "That's lovely."
 }
 

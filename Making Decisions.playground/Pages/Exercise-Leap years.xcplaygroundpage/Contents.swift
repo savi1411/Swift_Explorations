@@ -18,8 +18,22 @@
 func isLeapYear(_ year: Int) -> Bool {
     // Is the year divisible by 4?
     if number(year, isDivisibleBy: 4) {
-        return true
+        // If so, is the year divisible by 100?
+        if number(year, isDivisibleBy: 100) {
+            // If so, is the year divisible by 400?
+            if number(year, isDivisibleBy: 400) {
+                // If so, it is a leap year.
+                return true
+            } else {
+                // If not, it is not a leap year.
+                return false
+            }
+        } else {
+            // If it's not divisible by 100, it is a leap year.
+            return true
+        }
     } else {
+        // If it's not divisible by 4, it is not a leap year.
         return false
     }
 }
@@ -32,6 +46,12 @@ isLeapYear(1900)
 isLeapYear(2012)
 // Should be false
 isLeapYear(2017)
+// Should be true
+isLeapYear(2052)
+// Should be false
+isLeapYear(2021)
+
+
 
 /*:
  - callout(Exercise): Complete the function above so that the rules are all followed and the examples get the correct answers.
@@ -44,8 +64,60 @@ _**Hint**_: Try using the rules as pseudocode by making them into comments. Then
  \
 _**Hint**_: Create constants that represent the three key conditions, and then compose a Boolean expression with those constants.
  */
+//func isLeapYear2(_ year: Int) -> Bool {
+//}
+
+// By Andrey
 func isLeapYear2(_ year: Int) -> Bool {
+    if (year % 4 == 0 && year % 100 != 0) || year % 400 == 0 {
+        return true
+    } else {
+        return false
+    }
 }
+
+// Should be true
+isLeapYear2(2000)
+// Should be false
+isLeapYear2(1900)
+// Should be true
+isLeapYear2(2012)
+// Should be false
+isLeapYear2(2017)
+// Should be true
+isLeapYear2(2052)
+// Should be false
+isLeapYear2(2021)
+
+// Solução usando booleanos
+func isLeapYear3(_ year: Int) -> Bool {
+    let divisibleBy4 = number(year, isDivisibleBy: 4)
+//    print("Divisível por 4: \(divisibleBy4)")
+    let divisibleBy100 = number(year, isDivisibleBy: 100)
+//    print("Divisível por 100: \(divisibleBy100)")
+    let divisibleBy400 = number(year, isDivisibleBy: 400)
+//    print("Divisível por 400: \(divisibleBy400)")
+    
+    if divisibleBy4 && (!divisibleBy100 || divisibleBy400) {
+        return true
+    } else {
+        return false
+    }
+}
+
+// Should be true
+isLeapYear3(2000)
+// Should be false
+isLeapYear3(1900)
+// Should be true
+isLeapYear3(2012)
+// Should be false
+isLeapYear3(2017)
+// Should be true
+isLeapYear3(2052)
+// Should be false
+isLeapYear3(2021)
+
 /*:
   _Copyright © 2020 Apple Inc._
  

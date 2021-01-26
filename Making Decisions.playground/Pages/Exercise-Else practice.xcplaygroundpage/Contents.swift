@@ -13,6 +13,13 @@ if secretWord != guess {
     print("Your guess is wrong.")
 }
 
+// Usando o else para simplificar o código
+if secretWord == guess {
+    print("Your guess is right.")
+} else {
+    print("Your guess is wrong.")
+}
+
 /*:
  - callout(Exercise): Rewrite the code above to use an else statement.
 
