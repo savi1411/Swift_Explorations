@@ -6,10 +6,11 @@
  */
 "hello".count
 //: If you want to choose from one of two different default answers, you can use the remainder operator to get the remainder of the count after dividing by two:
-"a".count % 2
-"ab".count % 2
-"abc".count % 2
-"abcd".count % 2
+"a".count % 3
+"ab".count % 3
+"abc".count % 3
+"abcd".count % 3
+
 //: This means that you can convert any string into `0` or `1`, then use the result to decide on an answer:
 func responseTo(question: String) -> String {
     
@@ -21,19 +22,27 @@ func responseTo(question: String) -> String {
         return "To the North!"
     } else {
       
-        let defaultNumber = question.count % 2
+        let defaultNumber = question.count % 3
+        // Essa expressão irá retornar 0, 1 ou 2
+//        print("\(question.count % 3)")
         
         if defaultNumber == 0 {
+            // 0
             return "That really depends"
-        } else {
+        } else if defaultNumber == 1 {
+            // 1
             return "Ask me again tomorrow"
+        } else {
+            // 2
+            return "Let me think about it"
         }
-
     }
+    
 }
 responseTo(question: "Where are the cookies?")
 responseTo(question: "Can I have a cookie?")
 responseTo(question: "PLEASE can I have a cookie?")
+responseTo(question: "When the world will be finished?")
 /*:
  - callout(Exercise): Amend the function above to choose from one of three default answers instead of two.
 

@@ -23,14 +23,20 @@ lowerQuestion.hasPrefix("where")
 //:  - callout(Exercise): Rewrite the function below to work with aNy cAsE of QueStiOn TeXT, so you get a correct answer in the example:
 func responseTo(question: String) -> String {
     
-    if question.hasPrefix("hello") {
-        return "Why, hello there"
+    // Forma otimizada - by Andrey - sem variável adicional
+//    if question.lowercased().hasPrefix("hello") {
+    
+    // Forma mais acadêmica - usando uma variável adicional
+    let lowerQuestion = question.lowercased()
+    
+    if lowerQuestion.hasPrefix("hello") {
+        return "E aí, beleza!"
     } else {
-        return "That really depends"
+        return "Putz, aí depende"
     }
 }
 
-responseTo(question: "Hello!")
+responseTo(question: "HELLO!")
 /*:
 [Previous](@previous)  |  page 3 of 7  |  [Next: Special Questions](@next)
  */

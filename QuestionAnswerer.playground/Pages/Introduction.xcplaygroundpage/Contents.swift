@@ -16,6 +16,7 @@ func responseTo(question: String) -> String {
 responseTo(question: "How are you?")
 responseTo(question: "I said, how are you?")
 responseTo(question: "Oh, never mind.")
+
 //:  This doesn’t make for great conversation. The function gives the same answer, whatever the question. There are more interesting examples coming up.
  
 /*:

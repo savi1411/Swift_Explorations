@@ -21,3 +21,18 @@ responseTo(question: "Where are the cookies?")
 
 [Previous](@previous)  |  page 4 of 7  |  [Next: Default Answers](@next)
  */
+// Exercício resolvido
+func responseToSolved(question: String) -> String {
+    
+    let lowerQuestion = question.lowercased()
+    print(lowerQuestion)
+    
+    if lowerQuestion == "where are the cookies?" {
+        return "In the cookie jar!"
+    } else if lowerQuestion.hasPrefix("where") {
+        return "To the North!"
+    } else {
+        return "That really depends"
+    }
+}
+responseToSolved(question: "Where are the cookies?")

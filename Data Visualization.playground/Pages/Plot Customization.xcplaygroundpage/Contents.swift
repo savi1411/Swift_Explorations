@@ -22,7 +22,7 @@ makePlot()
 setXAxis(minimum: -10, maximum: 10)
 setYAxis(minimum: -10, maximum: 10)
 
-addPointAt(x: 1, y: 2, color: .black)
+addPointAt(x: 1, y: -10, color: .red)
 addPointAt(x: 3, y: 1, color: .black)
 addPointAt(x: 3, y: 4, color: .black)
 addPointAt(x: 2, y: 6, color: .black)
