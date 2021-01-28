@@ -10,8 +10,12 @@ Below the declaration of `friendPlans`, update `myPlans` by using the addition o
 Check the values of `myPlans` and `friendPlans`. Are they the same or different?
  */
 // Create your variables here:
-
+var myPlans = "some rest, playing some casual games, have dinner, play with the cats, talk to my wife and family"
 // Update `myPlans` here:
+var friendPlans = myPlans   // Cópia da instância original
+friendPlans += ", and take a look at tomorrow class"
+print(myPlans)
+print(friendPlans)
 
 /*:
  - callout(Exercise): 
@@ -19,6 +23,17 @@ Check the values of `myPlans` and `friendPlans`. Are they the same or different?
  Call the `addDance` function passing in `myPlans`, and assign the result to `friendPlans`.
  */
 // Define and call your function here:
+func addDance(plan: String, dance: Bool) -> String {
+    if dance {
+        return "\(plan), and then we dance!"
+    } else {
+        return "\(plan), but no dancing"
+    }
+}
+
+// Plans with dance
+friendPlans = addDance(plan: myPlans, dance: false)
+//friendPlans = addDance(plan: myPlans, dance: false)
 
 /*:
  - callout(Exercise): 
@@ -26,7 +41,7 @@ Check the values of `myPlans` and `friendPlans`. Are they the same or different?
  Print both instances to to find out.
  */
 // Check your guess by printing here:
-
+print(friendPlans)
 /*:
   _Copyright © 2020 Apple Inc._
  

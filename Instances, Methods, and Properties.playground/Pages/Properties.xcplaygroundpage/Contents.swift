@@ -21,7 +21,10 @@ let something = "It was the best of times"
 something.isEmpty
 
 let nothing = ""
-nothing.isEmpty
+if nothing.isEmpty {
+    print("Favor preencher todos os campos")
+}
+
 /*:
  The same type safety rules apply for properties as with methods:
  

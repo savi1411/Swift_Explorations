@@ -24,6 +24,8 @@ Since arrays always know what kind of element they're holding, you can pull out 
  - callout(Exercise): Try setting `anotherGrade` to a number. What happens?
  */
 var anotherGrade = grades[1]
+//anotherGrade = 35   // Erro de tipo
+
 /*:
 Next, learn how to work through the values in an array.\
 [Previous](@previous)  |  page 5 of 18  |  [Next: Processing Arrays](@next)

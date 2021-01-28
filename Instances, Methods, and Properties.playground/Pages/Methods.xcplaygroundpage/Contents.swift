@@ -5,8 +5,10 @@
  
  Here are two string instances:
  */
+// Vamos criar uma instância de um Tipo de dados String
 let introduction = "It was a dark and stormy night"
 let alternateIntroduction = "Once upon a time"
+
 /*:
  It’s often useful to know if a string begins with another string. The method `hasPrefix()` can answer this question.
  
@@ -17,11 +19,13 @@ let alternateIntroduction = "Once upon a time"
  
  Instance methods are called by using a period (`.`) after the instance, followed by the method call:
  */
+// Como introduction e alternateIntroduction são instâncias do Tipo String,
+//  passamos a ter acesso às propriedades e métodos deste tipo
 introduction.hasPrefix("It was")
 
 introduction.hasPrefix("It wasn't")
 
-alternateIntroduction.hasPrefix("It was")
+alternateIntroduction.hasPrefix("Once")
 alternateIntroduction.hasPrefix("It wasn't")
 
 /*:
