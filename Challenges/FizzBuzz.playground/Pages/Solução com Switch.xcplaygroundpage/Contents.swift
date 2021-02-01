@@ -7,5 +7,5 @@
 // Codifique aqui sua solução
 
 /*:
-[Anterior](@previous)  |  página 7 of 3
+[Anterior](@previous)  |  página 3 of 3
  */
