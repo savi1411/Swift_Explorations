@@ -17,11 +17,21 @@ func change(for amountGiven: Double, purchasePrice: Double) -> [Denomination] {
     }
 
     // Convert amounts to pennies.
-    let amountInPennies = Int(amountGiven * 100)
-    let purchaseInPennies = Int(purchasePrice * 100)
+//    let amountInPennies = Int(amountGiven * 100)
+//    let purchaseInPennies = Int(purchasePrice * 100)
+    
+    let amountInPennies = amountGiven * 100
+    let purchaseInPennies = purchasePrice * 100
+    
+    // FIX the bug
+    let roundedAmountInPennies = amountInPennies.rounded() // Produces a new Double
+    let roundedPurchaseInPennies = purchaseInPennies.rounded() // Produces a new Double
     
     // Calculate change in pennies.
-    var changeInPennies = amountInPennies - purchaseInPennies
+//    var changeInPennies = amountInPennies - purchaseInPennies
+    
+    // fix the bug
+    var changeInPennies = roundedAmountInPennies - roundedPurchaseInPennies
     
     // Set up an array of all available denominations.
     var denominations: [Denomination] = [.ten, .five, .one, .quarter, .dime, .nickel, .penny]
@@ -34,7 +44,7 @@ func change(for amountGiven: Double, purchasePrice: Double) -> [Denomination] {
     while changeInPennies > 0 {
         // If the current denomination is too large, choose the next-smallest one and
         // skip to the next iteration of the loop.
-        if currentDenomination.valueInPennies > changeInPennies {
+        if currentDenomination.valueInPennies > Int(changeInPennies) {
             denominations.remove(at: 0)
             currentDenomination = denominations[0]
             continue
@@ -42,7 +52,7 @@ func change(for amountGiven: Double, purchasePrice: Double) -> [Denomination] {
         
         // Add one of this denomination to the change and subtract that amount
         // from the change due.
-        changeInPennies -= currentDenomination.valueInPennies
+        changeInPennies -= Double(currentDenomination.valueInPennies)
         change.append(currentDenomination)
     }
     

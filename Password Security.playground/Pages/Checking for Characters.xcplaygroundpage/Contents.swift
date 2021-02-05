@@ -12,20 +12,7 @@
  
  The two new arrays below contain the digits and common punctuation characters. Use them in your algorithm.
  */
-let tenMostCommonPasswords = [
-    "123456",
-    "password",
-    "12345678",
-    "qwerty",
-    "12345",
-    "123456789",
-    "letmein",
-    "1234567",
-    "football",
-    "iloveyou"
-]
-let digits = "0123456789"
-let punctuation = "!@#$%^&*(),.<>;'`~[]{}\\|/?_-+= "
+
 /*:
  Implement your updated algorithm below. Rather than checking the password as a whole, you'll now have to check each of its characters.
  
@@ -35,8 +22,9 @@ let punctuation = "!@#$%^&*(),.<>;'`~[]{}\\|/?_-+= "
  
  As a bonus, consider adding more detailed error messages to let the user know exactly which rule they failed to observe.
  */
-let password = "password"
-
+let username = "user01"
+let password = "p@sswordxxxxxxxxXxxxxxxxxxxxxxxx1"
+validPassword(username: username, password: password)
 /*:
 [Previous](@previous)  |  page 2 of 5  |  [Next: Advanced Rules](@next)
  */

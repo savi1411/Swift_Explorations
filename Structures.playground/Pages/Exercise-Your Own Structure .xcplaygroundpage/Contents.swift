@@ -7,6 +7,66 @@
  */
  // Add your English-language description of the type here. Make sure to add // before each line of your comment description.
 
+/*
+ Computer:
+ - screenSize - imutável - Double
+ - totalRAMinMB - mutável - Int
+ - manufacturer - imutável - String
+ - isOn - mutável - indica se o computador está ligado/desligado
+ - turnOnOff - métodos de instância para ligar/desligar
+
+  */
+
+// Crie a estrutura baseado nas caracteríticas acima
+struct Computer {
+    let screenSize: Double
+    var totalRAMinMB: Int
+    let manufacturer: String
+    var isOn: Bool
+    
+    mutating func turnOnOff(mode: Bool) {
+        isOn = mode
+        
+//        if isOn {
+//            print("Ligando o computador...")
+//        } else {
+//            print("Desligando o computador...")
+//        }
+        
+        // Usando operador ternário
+        print(isOn ? "Ligando o computador..." : "Desligando o computador...")
+
+    }
+    
+    func isComputerOn() -> String {
+//        if isOn {
+//            return "O computador está ligado"
+//        } else {
+//            return "O computador está desligado"
+//        }
+        
+        // Usando o operador ternário
+        return isOn ? "O computador está ligado" : "O computador está desligado"
+    }
+    
+//    func isComputerOn() -> Bool {
+//        return isOn
+//    }
+    
+}
+
+var macBook = Computer(screenSize: 13.5, totalRAMinMB: 8, manufacturer: "Apple", isOn: false)
+
+print(macBook.isComputerOn())
+macBook.turnOnOff(mode: true)
+print(macBook.isComputerOn())
+
+//macBook.screenSize = 15 - imutável
+macBook.totalRAMinMB = 16
+
+macBook.turnOnOff(mode: false)
+print(macBook.isComputerOn())
+
 /*:
  - callout(Exercise): 
  Using the `struct` syntax from this lesson, create a type for your real-world object with the properties and methods you thought of. Remembering to mark each property with `let` or `var` depending on whether or not it will be allowed to change. If you're not sure how to implement the body of one of the methods, describe what the method should do in a comment.\
@@ -46,6 +106,7 @@ let newLaces = Shoelaces()
 
 // Use the instance of the placeholder type to create an instance of your new type
 let newShoe = TrainingShoe(size: 39, isTied: true, laces: newLaces)
+
 
 /*:
   _Copyright © 2020 Apple Inc._

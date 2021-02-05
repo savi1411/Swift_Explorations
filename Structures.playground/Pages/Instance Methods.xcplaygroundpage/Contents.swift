@@ -21,8 +21,9 @@ Notice that within the body of the method definition, you can access the values 
 
 Just like the methods on built-in types, the methods you define are called using the instance name, then a dot, then the name and arguments of the method:
  */
-let rectangle = Rectangle(width: 10, height: 10)
-let otherRectangle = Rectangle(width: 10, height: 20)
+
+let rectangle = Rectangle(width: 10, height: 30)
+let otherRectangle = Rectangle(width: 10, height: 30)
 
 rectangle.isBiggerThan(otherRectangle)
 otherRectangle.isBiggerThan(rectangle)

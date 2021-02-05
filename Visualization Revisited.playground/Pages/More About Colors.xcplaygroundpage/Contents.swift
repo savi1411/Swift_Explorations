@@ -14,7 +14,9 @@
 //:  - callout(Challenge): Use custom colors in a pie chart. Feel free to play around with hue, saturation, and brightness, combining them in different ways in your chart.
  
 makePieChart()
-
+pieChartView.wedges = [
+    PieWedge(proportion: 0.5, color: Color(red: 0.2, green: 0.4, blue: 0.5), scale: 0.2, offset: 1)
+]
 //:  - callout(Challenge): Use tranparency to create cool effects. (Hint: You can have pie wedges that add up to more than 100% of the pie.)
 
 //:  - callout(Challenge): Recreate the `addWedge(withProportion:color:)` and `addKeyItem(withLabel:color:)` functions from the original visualization API.

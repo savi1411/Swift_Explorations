@@ -13,7 +13,7 @@
  - callout(Exercise): The `/// - Note:` lines are currently empty. Add information to each line that indicates its limitations.
  */
 /// Represents a piggy bank that holds only pennies.
-/// - Note:
+/// - Note - limite de 255 pennies:
 class PiggyBank {
     private var pennies: UInt8 = 0
     
@@ -53,4 +53,8 @@ bank1.deposit(pennies: 100)
 bank1.balance() == 100 // This should be true
 
 // More test cases below...
+bank1.deposit(pennies: 100)
+bank1.balance() == 200 // This should be true
+//bank1.deposit(pennies: 100)
+//bank1.balance() == 300 // This should be true
 //: [Previous](@previous)  |  page 4 of 7  |  [Next: Making Change](@next)

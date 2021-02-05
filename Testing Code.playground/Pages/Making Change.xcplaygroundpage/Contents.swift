@@ -16,13 +16,23 @@
  - Experiment: Test the function with different purchase prices and amounts of cash. (Print the results to the console if the array is too large to see in the results sidebar.) Make sure you test illegal values, as well as those at and beyond the legal limits.
  */
 change(for: 10, purchasePrice: 2.75)
-
+change(for: 1, purchasePrice: 0.75)
+change(for: 501, purchasePrice: 250)
+change(for: 100, purchasePrice: 200)
+change(for: 100.101, purchasePrice: 50)
+change(for: 5, purchasePrice: 0)
+change(for: 10, purchasePrice: 20)
+change(for: 9.0, purchasePrice: 8.95)
 /*:
  A better way to test is to express each call as a comparison between the actual result and the expected one. That way, any failures will appear as `false` in the results sidebar.
  
  - callout(Exercise): Rewrite your tests following the pattern below.
  */
 change(for: 10, purchasePrice: 2.75) == [.five, .one, .one, .quarter]
+change(for: 10, purchasePrice: 8.00) == [.one, .one]
+change(for: 10, purchasePrice: 7.95) == [.one, .one, .nickel]
+change(for: 10, purchasePrice: 8.95) == [.one, .nickel]
+
 
 /*:
  Have you seen any errors in your testing? If not, try purchasing an item that costs $8.95.

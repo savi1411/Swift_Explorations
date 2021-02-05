@@ -23,6 +23,9 @@ var song = Song(title: "No, no, no", artist: "Fizz", duration: 150, rating: 0)
 song.rating
 song.rating = 4
 song.rating
+
+//song.title = "xpto" - Irá gerar erro, pois a informação é imutável
+
 /*:
  - Experiment: Change the variable `song` to be a constant. What error does that produce?
 

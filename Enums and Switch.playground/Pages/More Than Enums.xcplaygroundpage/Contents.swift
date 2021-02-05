@@ -9,15 +9,20 @@ let animal = "cat"
 
 func soundFor(animal: String) -> String {
     switch animal {
-        case "cat":
-            return "Meow!"
-        case "dog":
-            return "Woof!"
-        default:
-            return "I don't know that animal!"
+    case "cat":
+        return "Meow!"
+    case "dog":
+        return "Woof!"
+    case "cow":
+        return "Moo!"
+    default:
+        return "I don't know that animal!"
     }
 }
 soundFor(animal: animal)
+soundFor(animal: "dog")
+soundFor(animal: "cow")
+
 
 /*:
  - callout(Exercise): Call the `soundFor(animal:)` function a few times. Pass in known animals and unknown animals.\

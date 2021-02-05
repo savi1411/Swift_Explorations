@@ -15,10 +15,14 @@ func isRectangle(_ rectangle: Rectangle, biggerThan rectangle2: Rectangle) -> Bo
     let areaTwo = rectangle2.height * rectangle2.width
     return areaOne > areaTwo
 }
+
 //: Then you could use the function to compare two rectangles:
+// Aqui estamos instanciando as estruturas
 let rectangle = Rectangle(width: 10, height: 10)
 let anotherRectangle = Rectangle(width: 10, height: 30)
 
+// Aqui estamos usando as estruturas como parâmetros de uma função
+isRectangle(rectangle, biggerThan: anotherRectangle)
 isRectangle(rectangle, biggerThan: anotherRectangle)
 
 /*:

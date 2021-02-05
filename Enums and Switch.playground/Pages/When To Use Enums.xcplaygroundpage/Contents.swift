@@ -22,6 +22,20 @@
 
  - callout(Exercise): Define enums to represent the team and position options. Check on the previous pages for a refresher on the syntax.
  */
+enum Team {
+    case red, blue
+}
+
+let team: Team
+team = .blue
+
+enum Position {
+    case quarterback, seeker, pitcher, receiver
+}
+
+var position: Position
+position = .quarterback
+position = .pitcher
 
 /*:
 On the next page, learn about comparing enums.\

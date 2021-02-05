@@ -10,13 +10,17 @@
 func hline(x: Int, y: Int, length: Int, color: Color) {
     for i in 0 ... length - 1 {
         // Set the next pixel along the horizontal line
+        display.setPixel(x: x + i, y: y, color: .blue)
     }
 }
 
 /*:
  - callout(Exercise): Try using your line functions to create a new graphic.
  */
-
+hline(x: 5, y: 1, length: 4, color: .blue)
+hline(x: 0, y: 1, length: 4, color: .blue)
+hline(x: 0, y: 1, length: 4, color: .blue)
+hline(x: 0, y: 1, length: 4, color: .blue)
 //: Next, create rectangular blocks.
 
 //: [Previous](@previous)  |  page 4 of 13  |  [Next: Color Blocks](@next)

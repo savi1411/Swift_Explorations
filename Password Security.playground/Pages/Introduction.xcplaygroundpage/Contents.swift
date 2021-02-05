@@ -27,6 +27,22 @@ let tenMostCommonPasswords = [
  Use the `contains()` method of `Array` to make sure the user hasn't chosen one of these passwords. Display a message informing the user whether or not they've chosen a secure password.
  */
 let password = "password"
+if tenMostCommonPasswords.contains(password) {
+    print("Senha fraca, por favor revise")
+} else {
+    print("Senha criada com sucesso")
+}
+
+// Solução utilizando função - by Willian
+func securePassword(password: String) {
+    if tenMostCommonPasswords.contains(password) {
+        print("Senha fraca, por favor revise")
+    } else {
+        print("Senha criada com sucesso")
+    }
+}
+
+securePassword(password: password)
 
 /*:
 page 1 of 5  |  [Next: Checking for Characters](@next)

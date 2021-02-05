@@ -16,6 +16,26 @@ let tripDestinationVotes: [ClassTripDestination] = [.beach, .chocolateFactory, .
  - callout(Exercise): 
  Without counting the votes by hand, find out whether the students prefer the chocolate factory or the beach. *Hint: Check the Arrays and Loops playground for a refresher on working with collections of data.*
  */
+var beachVotes = 0
+var factoryVotes = 0
+
+for destiny in tripDestinationVotes {
+    switch destiny {
+    case .beach:
+        beachVotes += 1
+    case .chocolateFactory:
+        factoryVotes += 1
+    }
+}
+
+print("Praia: \(beachVotes), Fábrica: \(factoryVotes)")
+if beachVotes > factoryVotes {
+    print("Vamos para a praia!")
+} else if beachVotes < factoryVotes {
+    print("Vamos para a fábrica de chocolate!")
+} else {
+    print("Houve um empate. Temos que votar novamente.")
+}
 
 /*:
 ### Extension:
@@ -33,6 +53,30 @@ let mascotVotes: [SchoolMascotOption] = [.neither, .marmot, .salamander, .neithe
  - callout(Exercise): 
  Without counting by hand, determine which option has won.
  */
+var salamanderVotes = 0
+var marmotVotes = 0
+var neitherVotes = 0
+
+for mascot in mascotVotes {
+    switch mascot {
+    case .salamander:
+        salamanderVotes += 1
+    case .marmot:
+        marmotVotes += 1
+    case .neither:
+        neitherVotes += 1
+    }
+}
+
+print("Salamandra: \(salamanderVotes), Marmota: \(marmotVotes), Nenhum deles: \(neitherVotes)")
+if salamanderVotes > marmotVotes && salamanderVotes > neitherVotes {
+    print("O nosso novo mascote é a Salamandra")
+} else if marmotVotes > salamanderVotes && marmotVotes > neitherVotes {
+    print("O nosso novo mascote é a Marmota")
+} else {
+    print("Não houve maioria para nenhuma das opções.")
+}
+
 /*:
  - Experiment: 
  In the Arrays and Loops vote counting exercise, an extension exercise asked you to write a single function that could calculate the results of any Boolean vote. What prevents you from writing a single function for calculating both `tripDestinationVotes` and `mascotVotes`?
