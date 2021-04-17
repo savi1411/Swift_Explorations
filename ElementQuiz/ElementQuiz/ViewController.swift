@@ -83,6 +83,28 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         mode = .flashCard
+        
+        // Subscribe notificações do sistema operacional
+        // Keyboard events
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillChange(notification:)),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillChange(notification:)),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillChange(notification:)),
+                                               name: UIResponder.keyboardWillChangeFrameNotification,
+                                               object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
     }
 
     func updateFlashCardUI(elementName: String) {
@@ -202,6 +224,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         elementList = fixedElementList.shuffled()
 
+    }
+    
+    /// Delegates
+    @objc func keyboardWillChange(notification: Notification) {
+        print("Keyboard will change: \(notification.name.rawValue)")
+        view.frame.origin.y = -300
     }
     
     /// Callbacks
